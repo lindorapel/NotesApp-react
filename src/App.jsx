@@ -58,9 +58,13 @@ function App() {
               onArchive={onArchiveHandler}
             />
           ) : (
-            <p>Tidak ada catatan.</p>
+            <p style={{ textAlign: "center", color: "#aaa" }}>
+              Tidak ada catatan.
+            </p>
           )}
-          <h2>Catatan yang Diarsipkan</h2>
+          <h2 style={{ fontWeight: "400", margin: "16px 0" }}>
+            Catatan yang Diarsipkan
+          </h2>
           {archivedNotes.length > 0 ? (
             <NotesList
               notes={archivedNotes}
@@ -68,7 +72,9 @@ function App() {
               onArchive={onArchiveHandler}
             />
           ) : (
-            <p>Tidak ada catatan yang diarsipkan.</p>
+            <p style={{ textAlign: "center", color: "#aaa" }}>
+              Tidak ada catatan
+            </p>
           )}
         </div>
       </div>
