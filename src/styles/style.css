@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  font-family: Inter, sans-serif;
+}
+
+header {
+  border-bottom: 1px solid #aaa;
+  position: fixed;
+  width: 100%;
+}
+
+.note-header {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 16px;
+}
+
+::placeholder {
+  color: white;
+}
+
+.note-main {
+  margin: 0 auto 16px;
+  max-width: 1200px;
+  padding: 96px 16px 20px;
+}
+
+.note-input {
+  margin: 0 auto 48px;
+  max-width: 500px;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin: 12px 0;
+  padding: 12px;
+}
+
+.note-input form button {
+  display: block;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.notes-list {
+  grid-gap: 16px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(-webkit-min-content, -webkit-max-content);
+  grid-template-rows: minmax(min-content, max-content);
+  margin-bottom: 48px;
+}
+
+.note-item {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.note-item-content {
+  flex: 1 1;
+  padding: 12px;
+}
+
+.noteItem-delete,
+.note-item-archive {
+  background-color: transparent;
+  border: 0;
+  border-top: 1px solid #aaa;
+  display: block;
+  font-weight: 800;
+  padding: 8px 0;
+  width: 100%;
+}
+
+.noteItem-delete {
+  color: #ff5f52;
+  border-right: 1px solid #aaa;
+}
+
+.note-item-archive {
+  color: #fff263;
+}
+
+.noteItem-delete:hover {
+  color: #b00020;
+}
+.note-item-archive:hover {
+  color: #c49000;
+}
+
+@media only screen and (min-width: 0px) {
+  header h1 {
+    font-size: 24px;
+  }
+  .note-search {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .notes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  header h1 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .note-search {
+    max-width: 400px;
+    width: 100%;
+  }
+  .notes-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  header h1 {
+    font-size: 32px;
+  }
+}
